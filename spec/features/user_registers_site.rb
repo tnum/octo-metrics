@@ -7,7 +7,7 @@ feature 'User registers site' do
 	end
 	
 	scenario 'successfully' do
-		expect(page).to have_content('www.google.com')
+		expect(page).to have_content('Google search engine')
 	end
 
 	scenario 'unsuccessfully with duplicate link' do
