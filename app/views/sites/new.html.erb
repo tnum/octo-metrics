@@ -1,0 +1,9 @@
+<%= form_for @site do |f| %>
+	<span class="url_name">
+		<%= f.label :Name %>
+		<%= f.text_field :name %>
+	</span>
+	<%= f.label :url %>
+	<%= f.text_field :url %>
+	<%= f.submit "Add site" %>
+<% end %>
