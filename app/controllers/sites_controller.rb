@@ -4,6 +4,11 @@ class SitesController < ApplicationController
 		@sites = Site.all
 	end
 
+	def show
+		@site = Site.find(params[:id])
+		@siteevents = @site.events
+	end
+
 	def new
 		@site = Site.new
 	end
@@ -13,7 +18,7 @@ class SitesController < ApplicationController
 
 		if @site.save
 			flash[:notice] = "Site saved"
-			redirect_to sites_path
+			redirect_to root_path
 		else
 			flash[:error] = "There was an error. Please try again"
 			redirect_to new_site_path

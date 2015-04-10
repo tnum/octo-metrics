@@ -1,0 +1,8 @@
+<h1><%= @site.name %></h1>
+<h2><%= @site.url %></h2>
+
+<%= @siteevents.each do |s| %>
+	<%= s.name %>
+<% end %>
+
+<%= @siteevents.count %>
